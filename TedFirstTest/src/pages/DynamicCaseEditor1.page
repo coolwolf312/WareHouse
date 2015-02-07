@@ -1,0 +1,6 @@
+<apex:page >
+    <flow:interview name="TedFirstFlowInSFDC" finishLocation="{!URLFOR('/0019000000nihqR')}">
+
+       
+    </flow:interview>
+</apex:page>

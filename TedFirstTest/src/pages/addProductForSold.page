@@ -1,0 +1,30 @@
+<apex:page extensions="AddProductsForSold" standardController="GYOrder__c">
+    <apex:form >
+    <apex:pageBlock >
+      
+    
+   
+     <apex:pageBlockButtons >
+              
+                <apex:commandButton action="{!save}" id="saveButton" value="Save"/>
+               
+    </apex:pageBlockButtons>
+    
+    
+    <apex:pageBlockTable value="{!products}" var="product">
+
+            <apex:column value="{!product.GYProduct__c}"/> 
+            <apex:column value="{!product.GYOrder__c}"/> 
+            <apex:column >
+                <apex:facet name="header">Total Number</apex:facet>
+                <apex:inputField value="{!product.ProductSoldNumber__c}"/>
+               
+            </apex:column>
+
+    </apex:pageBlockTable> 
+    
+        
+        
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

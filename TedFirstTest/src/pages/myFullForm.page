@@ -1,0 +1,37 @@
+<apex:page extensions="AddProducts" standardController="InProduct__c">
+    <apex:form >
+    <apex:pageBlock >
+      
+    
+   
+     <apex:pageBlockButtons >
+              
+                <apex:commandButton action="{!save}" id="saveButton" value="Save"/>
+               
+    </apex:pageBlockButtons>
+    
+    
+    <apex:pageBlockTable value="{!products}" var="product"  rows="100">
+
+            <apex:column value="{!product.Product__c}"/> 
+            <apex:column value="{!product.InProduct__c}"/> 
+            <apex:column >
+                <apex:facet name="header">Total Number</apex:facet>
+                <apex:inputField value="{!product.TotalNumber__c}"/>
+                <!--
+                <apex:outputField value="{!product.TotalNumber__c}">
+               
+                     <apex:inlineEditSupport showOnEdit="saveButton, cancelButton" 
+                        hideOnEdit="editButton" event="ondblclick" 
+                        changedStyleClass="myBoldClass" resetFunction="resetInlineEdit"/>
+                </apex:outputField>
+                -->
+            </apex:column>
+
+    </apex:pageBlockTable> 
+    
+        
+        
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
