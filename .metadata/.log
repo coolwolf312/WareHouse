@@ -12778,3 +12778,137 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 !ENTRY com.salesforce.ide.core 2 0 2015-02-07 22:24:50.421
 !MESSAGE  WARN [2015-02-07 22:24:50,420] (ProjectPackageList.java:saveResources:1158) - Component list in project package 'Salesforce1 and Chatter Apps' is empty.  No resources to save.
 
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 22:35:13.101
+!MESSAGE  WARN [2015-02-07 22:35:13,100] (ComponentFactory.java:getCompositeComponentFromComponent:1102) - Unable to load existing 'classes/DailyUpdateStoreInfo.cls-meta.xml' from project - associated component's file resource is null.  Assuming new.
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 22:35:13.283
+!MESSAGE  WARN [2015-02-07 22:35:13,282] (ComponentController.java:deploy:402) - Remote save aborted - project is not online enabled
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 22:35:13.291
+!MESSAGE  WARN [2015-02-07 22:35:13,290] (Utils.java:loadDocument:794) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 22:35:13.291
+!MESSAGE  WARN [2015-02-07 22:35:13,291] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
+
+
+!ENTRY com.salesforce.ide.core 4 0 2015-02-07 22:37:40.335
+!MESSAGE ERROR [2015-02-07 22:37:40,335] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'unpackaged' [null] - skipping component generation
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 22:52:20.070
+!MESSAGE  WARN [2015-02-07 22:52:20,069] (ComponentFactory.java:getCompositeComponentFromComponent:1102) - Unable to load existing 'classes/GoodsInfoBatchHandler.cls-meta.xml' from project - associated component's file resource is null.  Assuming new.
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 22:52:20.220
+!MESSAGE  WARN [2015-02-07 22:52:20,219] (ComponentController.java:deploy:402) - Remote save aborted - project is not online enabled
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 22:52:20.222
+!MESSAGE  WARN [2015-02-07 22:52:20,222] (Utils.java:loadDocument:794) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 22:52:20.223
+!MESSAGE  WARN [2015-02-07 22:52:20,223] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
+
+
+!ENTRY com.salesforce.ide.core 4 0 2015-02-07 23:03:57.674
+!MESSAGE ERROR [2015-02-07 23:03:57,674] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'unpackaged' [null] - skipping component generation
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:04:01.400
+!MESSAGE  WARN [2015-02-07 23:04:01,400] (ProjectService.java:handleDeployResult:1906) - Save failed!
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:04:01.403
+!MESSAGE  WARN [2015-02-07 23:04:01,403] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+
+
+!ENTRY com.salesforce.ide.core 4 0 2015-02-07 23:04:29.364
+!MESSAGE ERROR [2015-02-07 23:04:29,363] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'unpackaged' [null] - skipping component generation
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:05:31.306
+!MESSAGE  WARN [2015-02-07 23:05:31,305] (ComponentController.java:checkInFolder:181) - Component resource 'DailyUpdateStoreInfo.cls' already exists in project
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:05:39.727
+!MESSAGE  WARN [2015-02-07 23:05:39,726] (ComponentFactory.java:getCompositeComponentFromComponent:1102) - Unable to load existing 'classes/DailyUpdateStoreInfoBatch.cls-meta.xml' from project - associated component's file resource is null.  Assuming new.
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:05:39.876
+!MESSAGE  WARN [2015-02-07 23:05:39,875] (ComponentController.java:deploy:402) - Remote save aborted - project is not online enabled
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:05:39.878
+!MESSAGE  WARN [2015-02-07 23:05:39,878] (Utils.java:loadDocument:794) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:05:39.878
+!MESSAGE  WARN [2015-02-07 23:05:39,878] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
+
+
+!ENTRY com.salesforce.ide.core 4 0 2015-02-07 23:07:12.917
+!MESSAGE ERROR [2015-02-07 23:07:12,916] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'unpackaged' [null] - skipping component generation
+
+
+!ENTRY com.salesforce.ide.ui.editors 4 2 2015-02-07 23:16:33.749
+!MESSAGE Problems occurred when invoking code from plug-in: "com.salesforce.ide.ui.editors".
+!STACK 0
+java.lang.NullPointerException
+	at apex.jorje.parser.impl.ApexParserImpl.selectorExpr(ApexParserImpl.java:7122)
+	at apex.jorje.parser.impl.ApexParserImpl.postfixExpr(ApexParserImpl.java:7015)
+	at apex.jorje.parser.impl.ApexParserImpl.prefixExpr(ApexParserImpl.java:6976)
+	at apex.jorje.parser.impl.ApexParserImpl.multiplyDivideExpr(ApexParserImpl.java:6852)
+	at apex.jorje.parser.impl.ApexParserImpl.addSubtractExpr(ApexParserImpl.java:6782)
+	at apex.jorje.parser.impl.ApexParserImpl.shiftExpr(ApexParserImpl.java:6575)
+	at apex.jorje.parser.impl.ApexParserImpl.comparisonExpr(ApexParserImpl.java:6429)
+	at apex.jorje.parser.impl.ApexParserImpl.bitwiseExpr(ApexParserImpl.java:6350)
+	at apex.jorje.parser.impl.ApexParserImpl.andExpr(ApexParserImpl.java:6278)
+	at apex.jorje.parser.impl.ApexParserImpl.orExpr(ApexParserImpl.java:6207)
+	at apex.jorje.parser.impl.ApexParserImpl.ternaryExpr(ApexParserImpl.java:6137)
+	at apex.jorje.parser.impl.ApexParserImpl.assignmentExpr(ApexParserImpl.java:6068)
+	at apex.jorje.parser.impl.ApexParserImpl.expression(ApexParserImpl.java:6029)
+	at apex.jorje.parser.impl.ApexParserImpl.statement(ApexParserImpl.java:4346)
+	at apex.jorje.parser.impl.ApexParserImpl.statementBlock(ApexParserImpl.java:4174)
+	at apex.jorje.parser.impl.ApexParserImpl.optionalStatementBlock(ApexParserImpl.java:4240)
+	at apex.jorje.parser.impl.ApexParserImpl.methodDecl(ApexParserImpl.java:3974)
+	at apex.jorje.parser.impl.ApexParserImpl.modifiedBlockMemberLoop(ApexParserImpl.java:1412)
+	at apex.jorje.parser.impl.ApexParserImpl.modifiedBlockMemberLoop(ApexParserImpl.java:1477)
+	at apex.jorje.parser.impl.ApexParserImpl.modifiedBlockMember(ApexParserImpl.java:1365)
+	at apex.jorje.parser.impl.ApexParserImpl.classMember(ApexParserImpl.java:2719)
+	at apex.jorje.parser.impl.ApexParserImpl.classDecl(ApexParserImpl.java:2465)
+	at apex.jorje.parser.impl.ApexParserImpl.typeDefCompilationUnit(ApexParserImpl.java:795)
+	at apex.jorje.parser.impl.ApexParserImpl.compilationUnit(ApexParserImpl.java:677)
+	at com.salesforce.ide.ui.editors.apex.ApexParserRunnable.parseCurrentEditorContents(ApexParserRunnable.java:80)
+	at com.salesforce.ide.ui.editors.apex.ApexParserRunnable.run(ApexParserRunnable.java:62)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at com.salesforce.ide.ui.editors.apex.ApexReconcilingStrategy.reconcile(ApexReconcilingStrategy.java:63)
+	at com.salesforce.ide.ui.editors.apex.ApexReconcilingStrategy.reconcile(ApexReconcilingStrategy.java:59)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:32:00.542
+!MESSAGE  WARN [2015-02-07 23:32:00,542] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:32:00.543
+!MESSAGE  WARN [2015-02-07 23:32:00,543] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+
+
+!ENTRY com.salesforce.ide.core 2 0 2015-02-07 23:32:00.544
+!MESSAGE  WARN [2015-02-07 23:32:00,543] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
+
+!SESSION 2015-02-08 10:28:28.060 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_75
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/Coolwolf/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/Coolwolf/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-02-08 10:28:37.310
+!MESSAGE System property http.nonProxyHosts has been set to local„ÄÅ169.254/16|*.local„ÄÅ169.254/16 by an external source. This value will be overwritten using the values from the preferences

@@ -397,3 +397,25 @@ ERROR [2015-02-07 22:24:44,235] (ProjectPackageList.java:generateComponents:481)
 ERROR [2015-02-07 22:24:44,288] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'Salesforce1 and Chatter Apps' [0A3900000006ITYCA2] - skipping component generation
  WARN [2015-02-07 22:24:49,290] (ProjectPackageList.java:saveResources:1158) - Component list in project package 'Salesforce Connected Apps' is empty.  No resources to save.
  WARN [2015-02-07 22:24:50,420] (ProjectPackageList.java:saveResources:1158) - Component list in project package 'Salesforce1 and Chatter Apps' is empty.  No resources to save.
+ WARN [2015-02-07 22:35:13,100] (ComponentFactory.java:getCompositeComponentFromComponent:1102) - Unable to load existing 'classes/DailyUpdateStoreInfo.cls-meta.xml' from project - associated component's file resource is null.  Assuming new.
+ WARN [2015-02-07 22:35:13,282] (ComponentController.java:deploy:402) - Remote save aborted - project is not online enabled
+ WARN [2015-02-07 22:35:13,290] (Utils.java:loadDocument:794) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
+ WARN [2015-02-07 22:35:13,291] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
+ERROR [2015-02-07 22:37:40,335] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'unpackaged' [null] - skipping component generation
+ WARN [2015-02-07 22:52:20,069] (ComponentFactory.java:getCompositeComponentFromComponent:1102) - Unable to load existing 'classes/GoodsInfoBatchHandler.cls-meta.xml' from project - associated component's file resource is null.  Assuming new.
+ WARN [2015-02-07 22:52:20,219] (ComponentController.java:deploy:402) - Remote save aborted - project is not online enabled
+ WARN [2015-02-07 22:52:20,222] (Utils.java:loadDocument:794) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
+ WARN [2015-02-07 22:52:20,223] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
+ERROR [2015-02-07 23:03:57,674] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'unpackaged' [null] - skipping component generation
+ WARN [2015-02-07 23:04:01,400] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-02-07 23:04:01,403] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ERROR [2015-02-07 23:04:29,363] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'unpackaged' [null] - skipping component generation
+ WARN [2015-02-07 23:05:31,305] (ComponentController.java:checkInFolder:181) - Component resource 'DailyUpdateStoreInfo.cls' already exists in project
+ WARN [2015-02-07 23:05:39,726] (ComponentFactory.java:getCompositeComponentFromComponent:1102) - Unable to load existing 'classes/DailyUpdateStoreInfoBatch.cls-meta.xml' from project - associated component's file resource is null.  Assuming new.
+ WARN [2015-02-07 23:05:39,875] (ComponentController.java:deploy:402) - Remote save aborted - project is not online enabled
+ WARN [2015-02-07 23:05:39,878] (Utils.java:loadDocument:794) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
+ WARN [2015-02-07 23:05:39,878] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
+ERROR [2015-02-07 23:07:12,916] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'unpackaged' [null] - skipping component generation
+ WARN [2015-02-07 23:32:00,542] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-02-07 23:32:00,543] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-02-07 23:32:00,543] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
