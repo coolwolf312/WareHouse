@@ -21,7 +21,8 @@ public class AddProducts {
            //setCon= new ApexPages.StandardSetController(gyplist);
             
                setCon = new ApexPages.StandardSetController(Database.getQueryLocator(
-                    [SELECT ID, Name, unit_price__c FROM GYProduct__c order by unit_price__c desc limit 1000]));
+                    [SELECT ID, Name, unit_price__c FROM GYProduct__c 
+                    order by unit_price__c desc limit 1000]));
                     
                   setCon.setPageSize(500);  
                     //system.debug('total size from database is ' + ((List<GYProduct__c>)setCon.getRecords()).size());
