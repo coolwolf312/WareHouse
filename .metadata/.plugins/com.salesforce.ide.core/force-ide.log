@@ -1061,3 +1061,4 @@ ERROR [2015-10-28 19:38:39,695] (ProjectPackageList.java:generateComponents:482)
  WARN [2015-12-06 19:06:11,996] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'SynonymDictionary': Unable to get bean for id 'SynonymDictionary'
  WARN [2015-12-06 19:06:23,409] (Utils.java:loadDocument:799) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
  WARN [2015-12-06 19:06:23,412] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
+ERROR [2015-12-09 21:47:46,149] (MetadataOperationsRetryAspect.java:metadataOperationsRetry:34) - ForceRemoteException occurred while attempting to perform a metadata operation
