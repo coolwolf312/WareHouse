@@ -419,3 +419,645 @@ ERROR [2015-02-07 23:07:12,916] (ProjectPackageList.java:generateComponents:481)
  WARN [2015-02-07 23:32:00,542] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
  WARN [2015-02-07 23:32:00,543] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
  WARN [2015-02-07 23:32:00,543] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
+ WARN [2015-02-08 22:53:06,530] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-02-08 22:53:06,575] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-02-08 22:53:06,576] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-02-13 21:19:31,616] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-02-13 21:19:31,723] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-02-13 21:19:31,724] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-03-04 21:15:15,713] (BaseRetryAspect.java:isConnectionExceptionRetryable:153) - Connection evaluation deemed exception not retry-able:
+ MalformedQueryFault: 
+select * from account where id = '0019000000nNJy0AAG'
+      ^
+ERROR at Row:1:Column:7
+unexpected token: '*'
+ WARN [2015-03-04 21:15:15,731] (BaseRetryAspect.java:isOperationsExceptionRetryable:182) - Operataions evaluation deemed exception not retry-able:
+ MalformedQueryFault: 
+select * from account where id = '0019000000nNJy0AAG'
+      ^
+ERROR at Row:1:Column:7
+unexpected token: '*'
+ERROR [2015-03-04 21:15:15,733] (SchemaBrowser.java:run:248) - com.salesforce.ide.core.remote.ForceConnectionException: 
+select * from account where id = '0019000000nNJy0AAG'
+      ^
+ERROR at Row:1:Column:7
+unexpected token: '*'
+ERROR [2015-03-04 21:15:15,771] (SchemaBrowser.java:mouseUp:204) - Unable to open Schema Browser
+[MalformedQueryFault [ApiQueryFault [ApiFault  exceptionCode='MALFORMED_QUERY'
+ exceptionMessage='
+select * from account where id = '0019000000nNJy0AAG'
+      ^
+ERROR at Row:1:Column:7
+unexpected token: '*''
+ upgradeURL='null'
+ upgradeMessage='null'
+]
+ row='1'
+ column='7'
+]
+]
+
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at java.lang.Class.newInstance(Class.java:379)
+	at com.sforce.ws.bind.TypeMapper.readSingle(TypeMapper.java:628)
+	at com.sforce.ws.bind.TypeMapper.readObject(TypeMapper.java:505)
+	at com.sforce.ws.transport.SoapConnection.parseDetail(SoapConnection.java:230)
+	at com.sforce.ws.transport.SoapConnection.createException(SoapConnection.java:204)
+	at com.sforce.ws.transport.SoapConnection.receive(SoapConnection.java:150)
+	at com.sforce.ws.transport.SoapConnection.send(SoapConnection.java:99)
+	at com.sforce.soap.partner.wsc.PartnerConnection.query(PartnerConnection.java:1217)
+	at com.salesforce.ide.core.remote.Connection.query(Connection.java:839)
+	at com.salesforce.ide.core.remote.Connection$$FastClassByCGLIB$$8e61a81d.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invoke(MethodProxy.java:149)
+	at org.springframework.aop.framework.Cglib2AopProxy$CglibMethodInvocation.invokeJoinpoint(Cglib2AopProxy.java:700)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:149)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:77)
+	at com.salesforce.ide.core.internal.aspects.CrudOperationsRetryAspect.crudOperationRetry(CrudOperationsRetryAspect.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:616)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:64)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:50)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:90)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:171)
+	at org.springframework.aop.framework.Cglib2AopProxy$DynamicAdvisedInterceptor.intercept(Cglib2AopProxy.java:635)
+	at com.salesforce.ide.core.remote.Connection$$EnhancerByCGLIB$$547807b9.query(<generated>)
+	at com.salesforce.ide.schemabrowser.ui.SchemaBrowser$1.run(SchemaBrowser.java:234)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:507)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:275)
+	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:1162)
+	at com.salesforce.ide.schemabrowser.ui.SchemaBrowser$2.mouseUp(SchemaBrowser.java:202)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:220)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4166)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1466)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1489)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1474)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1279)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4012)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3651)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1113)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:997)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:140)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:611)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:567)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:354)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:181)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+ WARN [2015-03-04 21:45:57,968] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-03-04 21:45:57,971] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-03-04 21:45:57,971] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-03-04 22:10:00,332] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-03-04 22:10:00,335] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-03-04 22:10:00,336] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-03-08 17:16:58,635] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-03-08 17:16:58,654] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-03-08 17:16:58,654] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
+ WARN [2015-03-09 21:31:44,070] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-03-09 21:31:44,248] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-03-09 21:31:44,249] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-03-11 22:47:35,354] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-03-11 22:47:35,373] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-03-11 22:47:35,373] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
+ WARN [2015-03-18 23:14:11,373] (ConnectionFactory.java:clearCache:217) - No cached connections
+ WARN [2015-03-18 23:14:11,392] (DescribeObjectRegistry.java:clearCache:661) - No cached describes
+ WARN [2015-03-18 23:14:11,393] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-04-14 19:58:30,526] (ProjectAddEvaluator.java:visit:84) - Unable to add skip builder flag to added project 'P/RemoteSystemsTempFiles': Resource '/RemoteSystemsTempFiles' is not open. Cause:
+ (1) Resource '/RemoteSystemsTempFiles' is not open.
+ WARN [2015-04-14 19:58:30,672] (ProjectAddEvaluator.java:visit:99) - Unable to add skip builder flag to added project 'P/RemoteSystemsTempFiles': Resource '/RemoteSystemsTempFiles' is not open. Cause:
+ (1) Resource '/RemoteSystemsTempFiles' is not open.
+ WARN [2015-04-14 19:58:42,695] (ConnectionFactory.java:clearCache:217) - No cached connections
+ WARN [2015-04-14 19:58:42,704] (DescribeObjectRegistry.java:clearCache:661) - No cached describes
+ WARN [2015-04-14 19:58:42,798] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-10-17 15:10:30,970] (ComponentFactory.java:getCompositeComponentFromComponent:1102) - Unable to load existing 'classes/QuarterlyBatchBackupDailySalesDetailInfo.cls-meta.xml' from project - associated component's file resource is null.  Assuming new.
+ WARN [2015-10-17 15:10:31,302] (ComponentController.java:deploy:402) - Remote save aborted - project is not online enabled
+ WARN [2015-10-17 15:10:31,333] (Utils.java:loadDocument:794) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
+ WARN [2015-10-17 15:10:31,336] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
+ERROR [2015-10-17 15:13:13,229] (ProjectPackageList.java:generateComponents:481) - Filepath-zip mapping is null or empty for package 'unpackaged' [null] - skipping component generation
+ WARN [2015-10-17 16:04:42,855] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 16:04:42,859] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-17 16:06:39,673] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 16:06:39,677] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-17 16:07:57,805] (BaseAction.java:run:203) - Pre-run failed.  Action not executed.
+ WARN [2015-10-17 16:08:14,527] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 16:08:14,530] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-17 16:08:30,968] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 16:08:30,971] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-17 16:08:48,223] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 16:08:48,226] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-17 16:22:35,131] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 16:22:35,223] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-17 16:23:49,123] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 16:23:49,143] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-17 16:24:48,426] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 16:24:48,429] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-17 16:25:46,636] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 16:25:46,638] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-17 16:32:13,802] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-10-17 16:32:13,803] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-10-17 16:32:13,803] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
+ WARN [2015-10-17 16:32:41,377] (ProjectService.java:defaultApiVersionCheck:1709) - API version '31.0' is not supported by this Force.com IDE release. Project will be updated to latest supported API version: 33.0
+ WARN [2015-10-17 16:49:23,964] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'RecordType': Unable to get bean for id 'RecordType'
+ WARN [2015-10-17 16:49:23,996] (ComponentList.java:add:308) - Unable to add component to list - component null
+ WARN [2015-10-17 16:49:38,375] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,394] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,405] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,415] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,426] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,437] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,448] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,459] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,471] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,482] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,493] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,505] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,515] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,539] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,549] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,558] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,567] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,577] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,586] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,596] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,605] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,614] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,623] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,636] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,646] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,655] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,664] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,676] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,686] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,695] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,704] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,713] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,723] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,732] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,741] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-17 16:49:38,762] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-17 16:49:38,772] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-17 16:49:38,782] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-17 16:49:38,792] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-17 16:49:38,802] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-17 16:49:38,827] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,839] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,851] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,863] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,874] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,886] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,897] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,909] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,920] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,936] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,949] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,962] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,974] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,986] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:38,998] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,011] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,023] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,035] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,047] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,060] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,072] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,084] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,096] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,108] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,120] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,131] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,143] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,155] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,166] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,178] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,189] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,200] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-17 16:49:39,219] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexTrigger'.
+ WARN [2015-10-17 16:49:39,228] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexTrigger'.
+ WARN [2015-10-17 16:49:39,236] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexTrigger'.
+ WARN [2015-10-17 16:49:39,245] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexTrigger'.
+ WARN [2015-10-17 16:50:00,877] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_for_Outlook_oauth/ConnectivityDevConfigs/S8e_for_Outlook_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,882] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_for_Outlook_oauth/modules/sf_com_apps__S8e_for_Outlook_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,903] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce_for_Outlook', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,905] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Workbench_oauth_c4s/Canvases/Workbench_oauth_c4sCanvas.Canvas', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,906] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Workbench_oauth_c4s/modules/sf_com_apps__Workbench_oauth_c4s', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,907] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Workbench_oauth/ConnectivityDevConfigs/Workbench_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,908] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Workbench_oauth/modules/sf_com_apps__Workbench_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,911] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Workbench', tagging as component of type 'Unknown'
+ERROR [2015-10-17 16:50:00,914] (ProjectPackageList.java:generateComponents:482) - Filepath-zip mapping is null or empty for package 'Salesforce Connected Apps' [0A390000000654qCAA] - skipping component generation
+ WARN [2015-10-17 16:50:00,914] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S91_for_Windows_oauth/ConnectivityDevConfigs/S91_for_Windows_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,915] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S91_for_Windows_oauth/modules/sf_chttr_apps__S91_for_Windows_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,916] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce1_for_Windows', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,917] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Dataloader_Bulk_oauth/ConnectivityDevConfigs/Dataloader_Bulk_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,918] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Dataloader_Bulk_oauth/modules/sf_com_apps__Dataloader_Bulk_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,919] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Dataloader_Bulk', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,920] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Dataloader_P5r_oauth/ConnectivityDevConfigs/Dataloader_P5r_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,921] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Dataloader_P5r_oauth/modules/sf_com_apps__Dataloader_P5r_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,922] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Dataloader_Partner', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,923] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Forcecom_IDE_oauth/ConnectivityDevConfigs/Forcecom_IDE_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,924] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Forcecom_IDE_oauth/modules/sf_com_apps__Forcecom_IDE_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,925] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Forcecom_IDE', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,926] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Forcecom_Migration_Tool_oauth/ConnectivityDevConfigs/Forcecom_Migration_Tool_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,927] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Forcecom_Migration_Tool_oauth/modules/sf_com_apps__Forcecom_Migration_Tool_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,928] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Forcecom_Migration_Tool', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,929] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_M4e_Dashboards_oauth/ConnectivityDevConfigs/S8e_M4e_Dashboards_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,930] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_M4e_Dashboards_oauth/modules/sf_com_apps__S8e_M4e_Dashboards_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,931] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce_Mobile_Dashboards', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,932] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_T3h_oauth/ConnectivityDevConfigs/S8e_T3h_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,933] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_T3h_oauth/modules/sf_com_apps__S8e_T3h_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,934] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce_Touch', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,935] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_Desktop_oauth/ConnectivityDevConfigs/C5r_Desktop_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,935] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_Desktop_oauth/modules/sf_chttr_apps__C5r_Desktop_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,936] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Chatter_Desktop', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,937] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_Android_oauth_android/AndroidPushApplicationSetup/C5r_for_Android_oauth_androidAndroidPushApplicationSetup.AndroidPushApplicationSetup', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,938] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_Android_oauth_android/modules/sf_chttr_apps__C5r_for_Android_oauth_android', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,939] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_Android_oauth/ConnectivityDevConfigs/C5r_for_Android_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,940] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_Android_oauth/modules/sf_chttr_apps__C5r_for_Android_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,941] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Chatter_for_Android', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,942] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_BlackBerry_oauth/ConnectivityDevConfigs/C5r_for_BlackBerry_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,943] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_BlackBerry_oauth/modules/sf_chttr_apps__C5r_for_BlackBerry_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,944] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Chatter_for_BlackBerry', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,945] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_iOS_oauth_apple/ApplePushApplicationSetup/C5r_for_iOS_oauth_appleApplePushApplicationSetup.ApplePushApplicationSetup', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,946] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_iOS_oauth_apple/modules/sf_chttr_apps__C5r_for_iOS_oauth_apple', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,947] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_iOS_oauth/ConnectivityDevConfigs/C5r_for_iOS_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,948] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_iOS_oauth/modules/sf_chttr_apps__C5r_for_iOS_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,949] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Chatter_for_iOS', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,950] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S9A_oauth/ConnectivityDevConfigs/S9A_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,951] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S9A_oauth/modules/sf_chttr_apps__S9A_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,952] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/SalesforceA', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,953] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_C8x_oauth/ConnectivityDevConfigs/S8e_C8x_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,954] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_C8x_oauth/modules/sf_chttr_apps__S8e_C8x_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-17 16:50:00,955] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce_Chatterbox', tagging as component of type 'Unknown'
+ERROR [2015-10-17 16:50:00,956] (ProjectPackageList.java:generateComponents:482) - Filepath-zip mapping is null or empty for package 'Salesforce1 and Chatter Apps' [0A3900000006ITYCA2] - skipping component generation
+ WARN [2015-10-17 16:50:07,252] (ProjectPackageList.java:saveResources:1159) - Component list in project package 'Salesforce Connected Apps' is empty.  No resources to save.
+ WARN [2015-10-17 16:50:11,382] (ProjectPackageList.java:saveResources:1159) - Component list in project package 'Salesforce1 and Chatter Apps' is empty.  No resources to save.
+ WARN [2015-10-17 17:30:01,016] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-10-17 17:30:01,062] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-10-18 01:16:44,885] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-10-18 01:16:44,962] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-10-18 01:16:44,963] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
+ WARN [2015-10-27 21:48:51,160] (ProjectService.java:defaultApiVersionCheck:1709) - API version '33.0' is not supported by this Force.com IDE release. Project will be updated to latest supported API version: 31.0
+ WARN [2015-10-27 21:51:05,437] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-10-27 21:51:05,439] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-10-27 21:51:05,439] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-10-28 19:37:34,241] (ProjectService.java:defaultApiVersionCheck:1709) - API version '31.0' is not supported by this Force.com IDE release. Project will be updated to latest supported API version: 33.0
+ WARN [2015-10-28 19:38:12,211] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'RecordType': Unable to get bean for id 'RecordType'
+ WARN [2015-10-28 19:38:12,213] (ComponentList.java:add:308) - Unable to add component to list - component null
+ WARN [2015-10-28 19:38:26,571] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,596] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,606] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,616] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,626] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,637] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,647] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,658] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,668] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,677] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,685] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,694] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,703] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,712] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,722] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,732] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,740] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,750] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,760] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,768] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,777] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,787] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,796] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,804] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,813] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,822] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,833] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,841] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,850] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,858] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,868] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,877] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,886] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,895] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,903] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexClass'.
+ WARN [2015-10-28 19:38:26,923] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-28 19:38:26,933] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-28 19:38:26,942] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-28 19:38:26,950] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-28 19:38:26,972] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexComponent'.
+ WARN [2015-10-28 19:38:26,995] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,005] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,017] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,027] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,037] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,047] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,056] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,067] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,077] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,087] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,097] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,106] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,116] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,125] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,135] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,146] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,155] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,165] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,174] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,183] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,193] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,202] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,212] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,221] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,231] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,240] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,250] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,259] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,268] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,278] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,287] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,296] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexPage'.
+ WARN [2015-10-28 19:38:27,315] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexTrigger'.
+ WARN [2015-10-28 19:38:27,322] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexTrigger'.
+ WARN [2015-10-28 19:38:27,330] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexTrigger'.
+ WARN [2015-10-28 19:38:27,338] (MetadataValidationEventCollector.java:logValidationMessages:92) - Found following validation issues [1] for null
+ (1) FATAL: cvc-elt.1: Cannot find the declaration of element 'ApexTrigger'.
+ WARN [2015-10-28 19:38:39,650] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_for_Outlook_oauth/ConnectivityDevConfigs/S8e_for_Outlook_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,653] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_for_Outlook_oauth/modules/sf_com_apps__S8e_for_Outlook_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,658] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce_for_Outlook', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,659] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Workbench_oauth_c4s/Canvases/Workbench_oauth_c4sCanvas.Canvas', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,660] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Workbench_oauth_c4s/modules/sf_com_apps__Workbench_oauth_c4s', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,660] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Workbench_oauth/ConnectivityDevConfigs/Workbench_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,661] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Workbench_oauth/modules/sf_com_apps__Workbench_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,662] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Workbench', tagging as component of type 'Unknown'
+ERROR [2015-10-28 19:38:39,664] (ProjectPackageList.java:generateComponents:482) - Filepath-zip mapping is null or empty for package 'Salesforce Connected Apps' [0A390000000654qCAA] - skipping component generation
+ WARN [2015-10-28 19:38:39,665] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S91_for_Windows_oauth/ConnectivityDevConfigs/S91_for_Windows_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,665] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S91_for_Windows_oauth/modules/sf_chttr_apps__S91_for_Windows_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,666] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce1_for_Windows', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,667] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Dataloader_Bulk_oauth/ConnectivityDevConfigs/Dataloader_Bulk_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,667] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Dataloader_Bulk_oauth/modules/sf_com_apps__Dataloader_Bulk_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,668] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Dataloader_Bulk', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,669] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Dataloader_P5r_oauth/ConnectivityDevConfigs/Dataloader_P5r_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,669] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Dataloader_P5r_oauth/modules/sf_com_apps__Dataloader_P5r_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,670] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Dataloader_Partner', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,671] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Forcecom_IDE_oauth/ConnectivityDevConfigs/Forcecom_IDE_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,672] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Forcecom_IDE_oauth/modules/sf_com_apps__Forcecom_IDE_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,673] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Forcecom_IDE', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,674] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Forcecom_Migration_Tool_oauth/ConnectivityDevConfigs/Forcecom_Migration_Tool_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,675] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/Forcecom_Migration_Tool_oauth/modules/sf_com_apps__Forcecom_Migration_Tool_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,675] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Forcecom_Migration_Tool', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,676] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_M4e_Dashboards_oauth/ConnectivityDevConfigs/S8e_M4e_Dashboards_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,677] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_M4e_Dashboards_oauth/modules/sf_com_apps__S8e_M4e_Dashboards_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,678] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce_Mobile_Dashboards', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,678] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_T3h_oauth/ConnectivityDevConfigs/S8e_T3h_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,679] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_T3h_oauth/modules/sf_com_apps__S8e_T3h_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,680] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce_Touch', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,681] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_Desktop_oauth/ConnectivityDevConfigs/C5r_Desktop_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,682] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_Desktop_oauth/modules/sf_chttr_apps__C5r_Desktop_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,682] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Chatter_Desktop', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,683] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_Android_oauth_android/AndroidPushApplicationSetup/C5r_for_Android_oauth_androidAndroidPushApplicationSetup.AndroidPushApplicationSetup', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,684] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_Android_oauth_android/modules/sf_chttr_apps__C5r_for_Android_oauth_android', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,684] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_Android_oauth/ConnectivityDevConfigs/C5r_for_Android_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,685] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_Android_oauth/modules/sf_chttr_apps__C5r_for_Android_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,686] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Chatter_for_Android', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,686] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_BlackBerry_oauth/ConnectivityDevConfigs/C5r_for_BlackBerry_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,687] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_BlackBerry_oauth/modules/sf_chttr_apps__C5r_for_BlackBerry_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,687] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Chatter_for_BlackBerry', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,688] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_iOS_oauth_apple/ApplePushApplicationSetup/C5r_for_iOS_oauth_appleApplePushApplicationSetup.ApplePushApplicationSetup', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,689] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_iOS_oauth_apple/modules/sf_chttr_apps__C5r_for_iOS_oauth_apple', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,689] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_iOS_oauth/ConnectivityDevConfigs/C5r_for_iOS_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,690] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/C5r_for_iOS_oauth/modules/sf_chttr_apps__C5r_for_iOS_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,691] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Chatter_for_iOS', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,691] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S9A_oauth/ConnectivityDevConfigs/S9A_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,692] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S9A_oauth/modules/sf_chttr_apps__S9A_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,693] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/SalesforceA', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,693] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_C8x_oauth/ConnectivityDevConfigs/S8e_C8x_oauth_devConfig.ConnectivityDevConfig', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,694] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'modules/S8e_C8x_oauth/modules/sf_chttr_apps__S8e_C8x_oauth', tagging as component of type 'Unknown'
+ WARN [2015-10-28 19:38:39,695] (ComponentFactory.java:getComponentByFilePath:622) - No id found for filepath 'applicationManifests/Salesforce_Chatterbox', tagging as component of type 'Unknown'
+ERROR [2015-10-28 19:38:39,695] (ProjectPackageList.java:generateComponents:482) - Filepath-zip mapping is null or empty for package 'Salesforce1 and Chatter Apps' [0A3900000006ITYCA2] - skipping component generation
+ WARN [2015-10-28 19:38:41,380] (ProjectPackageList.java:saveResources:1159) - Component list in project package 'Salesforce Connected Apps' is empty.  No resources to save.
+ WARN [2015-10-28 19:38:42,846] (ProjectPackageList.java:saveResources:1159) - Component list in project package 'Salesforce1 and Chatter Apps' is empty.  No resources to save.
+ WARN [2015-10-28 21:43:35,749] (ComponentFactory.java:getCompositeComponentFromComponent:1102) - Unable to load existing 'classes/DailyBatchCalculateSalesSummary.cls-meta.xml' from project - associated component's file resource is null.  Assuming new.
+ WARN [2015-10-28 21:43:39,594] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'AuraDefinitionBundle': Unable to get bean for id 'AuraDefinitionBundle'
+ WARN [2015-10-28 21:43:39,599] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'ExternalDataSource': Unable to get bean for id 'ExternalDataSource'
+ WARN [2015-10-28 21:43:39,600] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'NamedCredential': Unable to get bean for id 'NamedCredential'
+ WARN [2015-10-28 21:43:39,642] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'MatchingRules': Unable to get bean for id 'MatchingRules'
+ WARN [2015-10-28 21:43:39,645] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'ChannelLayout': Unable to get bean for id 'ChannelLayout'
+ WARN [2015-10-28 21:43:39,646] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'SharingRules': Unable to get bean for id 'SharingRules'
+ WARN [2015-10-28 21:43:39,659] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'ManagedTopics': Unable to get bean for id 'ManagedTopics'
+ WARN [2015-10-28 21:43:39,661] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'CorsWhitelistOrigin': Unable to get bean for id 'CorsWhitelistOrigin'
+ WARN [2015-10-28 21:43:39,662] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'ActionLinkGroupTemplate': Unable to get bean for id 'ActionLinkGroupTemplate'
+ WARN [2015-10-28 21:43:39,663] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'SynonymDictionary': Unable to get bean for id 'SynonymDictionary'
+ WARN [2015-10-28 21:43:49,850] (Utils.java:loadDocument:799) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
+ WARN [2015-10-28 21:43:49,851] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
+ WARN [2015-10-28 23:07:08,962] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-10-28 23:07:08,964] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-10-28 23:07:08,965] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
+ WARN [2015-10-31 22:22:07,596] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-10-31 22:22:07,817] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-10-31 22:22:07,818] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-11-01 22:02:40,976] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-11-01 22:02:41,164] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-11-01 22:02:41,165] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-11-06 19:24:27,302] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-11-06 19:24:27,385] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-11-06 19:24:50,516] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-11-06 19:24:50,520] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-11-06 19:28:33,682] (ProjectService.java:handleDeployResult:1906) - Save failed!
+ WARN [2015-11-06 19:28:33,685] (ProjectService.java:handleRetrieveResult:2078) - Nothing to save to project - retrieve result is empty
+ WARN [2015-11-06 19:31:45,793] (BaseAction.java:run:202) - Pre-run failed.  Action not executed.
+ WARN [2015-11-06 20:08:25,245] (BaseAction.java:run:202) - Pre-run failed.  Action not executed.
+ WARN [2015-11-06 21:33:37,862] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-11-06 21:33:37,863] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-11-06 21:33:37,869] (MetadataFactory.java:clearCache:129) - Clearing the following cached metadata stubs
+ WARN [2015-11-08 00:48:19,237] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-11-08 00:48:19,450] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-11-08 00:48:19,451] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-11-08 19:49:44,925] (ConnectionFactory.java:clearCache:220) - Clearing the following cached connections
+ WARN [2015-11-08 19:49:45,103] (DescribeObjectRegistry.java:clearCache:664) - Clearing cached describes
+ WARN [2015-11-08 19:49:45,105] (MetadataFactory.java:clearCache:126) - No cached metadata stubs
+ WARN [2015-12-06 19:06:03,523] (ComponentController.java:checkInFolder:181) - Component resource 'DailyBatchCalculateSalesSummary.cls' already exists in project
+ WARN [2015-12-06 19:06:10,175] (ComponentFactory.java:getCompositeComponentFromComponent:1102) - Unable to load existing 'classes/DailyBatchCalculateSalesSummaryByWeekly.cls-meta.xml' from project - associated component's file resource is null.  Assuming new.
+ WARN [2015-12-06 19:06:11,890] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'AuraDefinitionBundle': Unable to get bean for id 'AuraDefinitionBundle'
+ WARN [2015-12-06 19:06:11,903] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'ExternalDataSource': Unable to get bean for id 'ExternalDataSource'
+ WARN [2015-12-06 19:06:11,905] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'NamedCredential': Unable to get bean for id 'NamedCredential'
+ WARN [2015-12-06 19:06:11,971] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'MatchingRules': Unable to get bean for id 'MatchingRules'
+ WARN [2015-12-06 19:06:11,976] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'ChannelLayout': Unable to get bean for id 'ChannelLayout'
+ WARN [2015-12-06 19:06:11,977] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'SharingRules': Unable to get bean for id 'SharingRules'
+ WARN [2015-12-06 19:06:11,990] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'ManagedTopics': Unable to get bean for id 'ManagedTopics'
+ WARN [2015-12-06 19:06:11,993] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'CorsWhitelistOrigin': Unable to get bean for id 'CorsWhitelistOrigin'
+ WARN [2015-12-06 19:06:11,994] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'ActionLinkGroupTemplate': Unable to get bean for id 'ActionLinkGroupTemplate'
+ WARN [2015-12-06 19:06:11,996] (ComponentFactory.java:getComponentBean:1154) - Unable to get component for id 'SynonymDictionary': Unable to get bean for id 'SynonymDictionary'
+ WARN [2015-12-06 19:06:23,409] (Utils.java:loadDocument:799) - Unable to load document: /Users/Coolwolf/MyLearning/myGit/sfdc/.metadata/.plugins/org.eclipse.core.resources/.projects/TedFirstTest/com.salesforce.ide.core/packageCache.xml (No such file or directory)
+ WARN [2015-12-06 19:06:23,412] (ComponentController.java:run:380) - Unable to update cache with new component Apex Class - cache is not found
