@@ -4,5 +4,5 @@
     <apiAccessLevel>Unrestricted</apiAccessLevel>
     <description>This package contains Connected Applications for all the officially supported Salesforce1 and Chatter applications on your desktop and mobile devices!</description>
     <namespacePrefix>sf_chttr_apps</namespacePrefix>
-    <version>31.0</version>
+    <version>33.0</version>
 </Package>

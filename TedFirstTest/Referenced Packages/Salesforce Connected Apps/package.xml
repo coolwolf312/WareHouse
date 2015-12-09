@@ -4,5 +4,5 @@
     <apiAccessLevel>Unrestricted</apiAccessLevel>
     <description>This package contains Connected Applications for all the officially supported Salesforce client applications such as Touch, Salesforce for Outlook, Salesforce Mobile Dashboards, and more!</description>
     <namespacePrefix>sf_com_apps</namespacePrefix>
-    <version>31.0</version>
+    <version>33.0</version>
 </Package>

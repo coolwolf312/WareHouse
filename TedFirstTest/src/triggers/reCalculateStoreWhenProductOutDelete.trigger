@@ -9,11 +9,23 @@ trigger reCalculateStoreWhenProductOutDelete on GYOrder__c(before delete){
     
     List<GYP_O_Item__c> outProductDetails = [select GYProduct__c,GYOrder__c,ProductSoldNumber__c from GYP_O_Item__c where GYOrder__c=:orderIds ];
     
-    Map<Id,GYP_O_Item__c> proDetailMap = new Map<Id,GYP_O_Item__c>();
+    Map<Id,List<GYP_O_Item__c>> proDetailMap = new Map<Id,List<GYP_O_Item__c>>();
     // id -- productId, orderDetail
     for(GYP_O_Item__c detail : outProductDetails){
     
-        proDetailMap.put(detail.GYProduct__c,detail);
+    
+    	 if(proDetailMap.containsKey(detail.GYProduct__c)){
+    		list<GYP_O_Item__c>	soldSameproduct = proDetailMap.get(detail.GYProduct__c);  		
+    	 	soldSameproduct.add(detail);
+        	proDetailMap.put(detail.GYProduct__c,soldSameproduct);
+    	 	
+    	 }else{
+    	 	list<GYP_O_Item__c>	soldSameproduct = new list<GYP_O_Item__c>();  		
+    	 	soldSameproduct.add(detail);
+        	proDetailMap.put(detail.GYProduct__c,soldSameproduct);
+    	 	
+    	 }
+    
     
     }
     
@@ -23,8 +35,16 @@ trigger reCalculateStoreWhenProductOutDelete on GYOrder__c(before delete){
     
         if(proDetailMap.containsKey(storeDetail.GYProduct__c)){
         
-            storeDetail.StoredProductNumber__c = storeDetail.StoredProductNumber__c + proDetailMap.get(storeDetail.GYProduct__c).ProductSoldNumber__c;
+        	decimal totalSoldNum = 0;
+        	for(GYP_O_Item__c soldProdctionInfo : proDetailMap.get(storeDetail.GYProduct__c)){
+        		
+        		totalSoldNum = totalSoldNum + soldProdctionInfo.ProductSoldNumber__c;
+        		       		
+        	}
+                
+            storeDetail.StoredProductNumber__c = storeDetail.StoredProductNumber__c + totalSoldNum;
             storeDetail.SubCost__c = storeDetail.StoredProductNumber__c * storeDetail.unitPrice__c;
+            //needUpdateList.add(storeDetail);
         }
     
     }

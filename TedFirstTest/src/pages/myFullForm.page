@@ -11,7 +11,7 @@
     </apex:pageBlockButtons>
     
     
-    <apex:pageBlockTable value="{!products}" var="product"  rows="100">
+    <apex:pageBlockTable value="{!products}" var="product"  rows="150">
 
             <apex:column value="{!product.Product__c}"/> 
             <apex:column value="{!product.InProduct__c}"/> 

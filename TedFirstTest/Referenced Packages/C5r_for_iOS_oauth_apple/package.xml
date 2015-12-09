@@ -19,5 +19,5 @@
         </module>
     </modules>
     <namespacePrefix>sf_chttr_apps</namespacePrefix>
-    <version>31.0</version>
+    <version>33.0</version>
 </Package>
